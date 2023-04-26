@@ -1,5 +1,5 @@
 <?php
-include("/include/connection.php");
+include("include/connection.php");
 
 if (isset($_POST['create'])){
 
@@ -91,17 +91,18 @@ if (isset($_POST['create'])){
 
             <div class="form-group">
               <label for="">Username</label>
-              <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+              <input type="text" pattern="^[^\s]*$" name="uname" class="form-control" autocomplete="off"
+                placeholder="Enter Username">
             </div>
 
             <div class="form-group">
               <label for="">Email</label>
-              <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Enter Email">
+              <input type="email" name="email" class="form-control" autocomplete="off" placeholder="Enter Email">
             </div>
 
             <div class="form-group">
               <label for="">Phone No.</label>
-              <input type="number" name="phone" class="form-control" autocomplete="off"
+              <input type="number" pattern="[^0-9]+" name="phone" class="form-control" autocomplete="off"
                 placeholder="Enter Phone Number">
             </div>
 
@@ -111,6 +112,7 @@ if (isset($_POST['create'])){
                 <option value="">Select Your Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
@@ -118,9 +120,17 @@ if (isset($_POST['create'])){
             <div class="form-group">
               <label for="">Country</label>
               <select name="country" id="" class="form-control">
-                <option value="">Select Your Country</option>
-                <option value="GHANA">GHANA</option>
+                <option value="Viet Nam">Viet Nam</option>
                 <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Brazil">Brazil</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="Japan">Japan</option>
+                <option value="Australia">Australia</option>
               </select>
             </div>
 

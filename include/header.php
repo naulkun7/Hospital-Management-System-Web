@@ -30,7 +30,7 @@ include("asset/css/base.css") ?>
         if (isset($_SESSION["admin"])) {
           $user = $_SESSION["admin"];
           echo '
-            <li class="nav-item"><a href="./adminlogin.php" class="nav-link text-white">' . $user . '</a></li>
+            <li class="nav-item"><a href="profile.php" class="nav-link text-white">' . $user . '</a></li>
             <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>
           ';
         } elseif (isset($_SESSION["doctor"])) {
@@ -42,7 +42,7 @@ include("asset/css/base.css") ?>
         } elseif (isset($_SESSION["patient"])) {
           $user = $_SESSION["patient"];
           echo '
-            <li class="nav-item"><a href="./adminlogin.php" class="nav-link text-white">' . $user . '</a></li>
+            <li class="nav-item"><a href="profile.php" class="nav-link text-white">' . $user . '</a></li>
             <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>
           ';
         } else {

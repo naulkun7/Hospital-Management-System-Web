@@ -37,18 +37,6 @@ if (isset($_POST["apply"])) {
         $error["apply"] = "Both Password do not match";
     }
 
-    /*
-     *1. //inserting data into the database
-     * 2. Keep count of errors AS SEEN BELOW
-     * 3. Call the variable $show inside the htnl form where you will display the error
-     * 4. Go inside your table in the database, click INSERT and write query.
-     * -Click SQL
-     * -click INSERT BUTTON
-     * -Copy everything inside the first bracket closed ,from firstName to PROFILE
-     * (`firstname`, `surname`, `username`, `email`, `gender`, `phone`, `country`, `password`, `salary`, `data_reg`, `status`, `profile`)
-     * -Remove the quotes
-     *
-     * */
     if (count($error) == 0) {
         $query = "INSERT INTO doctors(firstname,surname,username,email,gender,phone,country,password,salary,data_reg,status,profile) VALUES('$firstname',
                                                 '$surname','$username', '$email','$gender','$phone','$country','$password', '0', NOW(), 'Pending','doctor.jpg') ";
@@ -157,10 +145,17 @@ if (isset($error["apply"])) {
               <label for="">Select Country</label>
               <select name="country" id="" class="form-control">
                 <option value="">Select Country</option>
-                <option value="Russia">Russia</option>
-                <option value="India">India</option>
-                <option value="Ghana">Ghana</option>
-
+                <option value="Viet Nam">USA</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Brazil">Brazil</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="Japan">Japan</option>
+                <option value="Australia">Australia</option>
               </select>
             </div>
 
