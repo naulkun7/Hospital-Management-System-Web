@@ -2,6 +2,11 @@
 session_start();
 ?>
 
+<style>
+<?php include("asset/css/style.css");
+include("asset/css/base.css") ?>
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 

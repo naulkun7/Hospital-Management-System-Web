@@ -60,6 +60,12 @@ if (isset($error['login'])){
 
 ?>
 
+<style>
+<?php include("asset/css/style.css");
+include("asset/css/base.css");
+include("asset/css/doctorlogin.css") ?>
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,34 +77,35 @@ if (isset($error['login'])){
   <?php
   include("include/header.php")
   ?>
-
-  <div class="container-fluid">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-6 jumbotron my-5">
-          <h5 class="text-center my-5">Doctors Login</h5>
-          <div>
-            <?php echo $show?>
+  <div class="section1">
+    <div class="container">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-3">
           </div>
-          <form method="post" action="">
-            <div class="form-group">
-              <label for="">Username</label>
-              <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+          <div class="col-md-6 jumbotron" style="background: #fff; border-radius:15px; margin-bottom:30px">
+            <div>
+              <?php echo $show?>
             </div>
+            <form method="post" action="" class="my-5">
+              <h3>DOCTOR LOGIN</h3>
+              <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+              </div>
 
-            <div class="form-group">
-              <label for="">Password</label>
-              <input type="password" name="pass" class="form-control" autocomplete="off" placeholder="Enter Username  ">
-            </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" name="pass" class="form-control" autocomplete="off"
+                  placeholder="Enter Username  ">
+              </div>
 
-            <input type="submit" name="login" class="btn btn-success" value="Login">
+              <input type="submit" name="login" class="btn btn-success button" value="Login">
 
-            <p>I don't have an account <a href="apply.php">Apply Now..!!</a></p>
+              <p>I don't have an account <a href="apply.php"> Apply now..!!</a></p>
 
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>

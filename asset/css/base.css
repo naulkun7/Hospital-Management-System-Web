@@ -9,7 +9,7 @@
   --color-bg: #eff2f5;
 }
 
-body {
+* {
   font-family: 'Inria Serif', serif;
   box-sizing: border-box;
 }
