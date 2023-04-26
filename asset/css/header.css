@@ -1,0 +1,8 @@
+.navbar .icon {
+  padding: 15px;
+  margin: 0;
+}
+
+.color {
+  background-color: var(--color-text-blue) !important;
+}

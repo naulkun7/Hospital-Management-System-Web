@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 50px;
+  padding-left: 0;
   height: auto;
   width: 100%;
 }
@@ -86,4 +87,38 @@
 .section9 .row2 .tag .tag-content .button {
   padding: 12px 20px;
   font-size: 13px;
+}
+
+footer {
+  background-color: var(--color-text-blue);
+}
+
+footer #copyright {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+footer #copyright h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+footer #social {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: space-around;
+  margin: 0;
+}
+
+footer #social .item {
+  margin: 20px 0;
+}
+
+footer #social .item a i {
+  display: inline-block;
+  color: white;
 }
