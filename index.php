@@ -38,47 +38,49 @@ include("asset/css/base.css") ?>
     </div>
   </div>
 
-
-
-  <div class="container">
-    <!--Start setting the browser screen at standard width division of 12-->
-    <div class="col-md-12">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-3 mx-1 shadow">
-          <h5 class="text-center">Click on the button for more information</h5>
-          <!--Anchor Tag to make the button clickable and to redirect the link -->
-          <a href="#">
-            <button class="btn btn-success my-3" style="margin-left: 20%">More Information</button>
-          </a>
-
+  <div class="section9">
+    <div class="container">
+      <div class="row row2">
+        <div class="col-lg-4 col-md-6">
+          <div class="tag" id="moreinfo">
+            <img src="./img/moreinfo.jpg" alt="blog-item-01" />
+            <div class="tag-content">
+              <a href="#" class="title">More information</a>
+              <p class="desc">
+                Click on the button to read report and all features of our project
+              </p>
+              <a href="#" class="button button-yellow">READ MORE</a>
+            </div>
+          </div>
         </div>
-
-        <!--2nd division set at (col-md-3) and margin/gap in horizontal line set to (mx-1), and adding bootstrap (shadow) to element -->
-        <div class="col-md-3 mx-1 shadow">
-          <!-- design this division with an image   -->
-          <img src="img/patient.jpeg" alt="" style="width: 100%; height: 190px">
-          <!--a description for the image, and bootstrap class to center the image-->
-          <h5 class="text-center">Create Account so that we can take good care of you</h5>
-          <!--Anchor Tag to make the button clickable and to redirect the link -->
-          <a href="./nav/patientaccount.php">
-            <button class="btn btn-success my-3" style="margin-left: 30%">Create Account..!!</button>
-          </a>
-
+        <div class="col-lg-4 col-md-6">
+          <div class="tag" id="register">
+            <img src="./img/registerpatient.jpg" alt="blog-item-01" alt="blog-item-02" />
+            <div class="tag-content">
+              <a href="#" class="title">Register Patient</a>
+              <p class="desc">
+                Create an account which we can support and take good care of you.
+              </p>
+              <a href="./nav/patientaccount.php" class="button button-yellow">REGISTER</a>
+            </div>
+          </div>
         </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="tag">
+            <img src="./img/contactus.jpg" alt="blog-item-01" alt="blog-item-02" />
 
-        <!--3rd division set at (col-md-3) and margin/gap in horizontal line set to (mx-1), and adding bootstrap (shadow) to element -->
-        <div class="col-md-3 mx-1 shadow">
-          <!-- design this division with an image   -->
-          <img src="img/hospital.jpeg" alt="" style="width: 100%; height: 190px">
-          <!--a description for the image, and bootstrap class to center the image-->
-          <h5 class="text-center">We are looking for Doctors</h5>
-          <a href="./nav/apply.php">
-            <button class="btn btn-success my-3" style="margin-left: 30%">Apply Now..!!</button>
-          </a>
+            <div class="tag-content">
+              <a href="#" class="title">Contact Us</a>
+              <p class="desc">
+                All information about us!
+              </p>
+              <a href="#" class="button button-yellow">DANGER</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--Start setting the browser screen at standard width division of 12-->
+  </div>
   </div>
 </body>
 
