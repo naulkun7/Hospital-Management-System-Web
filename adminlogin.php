@@ -59,9 +59,6 @@ include("asset/css/doctorlogin.css") ?>
           <div class="col-md-3">
           </div>
           <div class="col-md-6 jumbotron" style="background: #fff; border-radius:15px; margin-bottom:30px">
-            <div>
-              <?php echo $show?>
-            </div>
             <form method="post" action="" class="my-5">
               <h3>ADMIN LOGIN</h3>
               <div>

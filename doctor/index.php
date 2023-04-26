@@ -1,6 +1,5 @@
 <?php
-session_start();
-?>
+session_start(); ?>
 
 
 <!DOCTYPE html>
@@ -15,17 +14,15 @@ session_start();
 <body>
 
   <?php
-   include ("../include/header.php");
-   include("../include/connection.php");
-?>
+  include "../include/header.php";
+  include "../include/connection.php";
+  ?>
 
   <div class="container-fluid">
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-2" style="margin-left: -30px">
-          <?php
-                          include("sidenav.php");
-                          ?>
+          <?php include "sidenav.php"; ?>
         </div>
         <div class="col-md-10">
           <div class="container-fluid">
@@ -51,14 +48,12 @@ session_start();
                   <div class="col-md-12">
                     <div class="row">
                       <?php
-                                                       $p = mysqli_query($con, "SELECT * FROM patient");
-                                                       $pp = mysqli_num_rows($p);
-
-
-                                                       ?>
+                      $p = mysqli_query($con, "SELECT * FROM patient");
+                      $pp = mysqli_num_rows($p);
+                      ?>
 
                       <div class="col-md-8">
-                        <h5 class="text-white my-2" style="font-size: 30px"> <?php echo $pp ?></h5>
+                        <h5 class="text-white my-2" style="font-size: 30px"> <?php echo $pp; ?></h5>
                         <h5 class="text-white">Total</h5>
                         <h5 class="text-white">Patient</h5>
                       </div>
@@ -75,11 +70,13 @@ session_start();
 
                       <div class="col-md-8">
                         <?php
-                                                               $app = mysqli_query($con, "SELECT * FROM appointment WHERE status='Pending'");
-                                                               $appoint  = mysqli_num_rows($app);
-
-                                                           ?>
-                        <h5 class="text-white my-2" style="font-size: 30px"><?php echo $appoint ?></h5>
+                        $app = mysqli_query(
+                            $con,
+                            "SELECT * FROM appointment WHERE status='Pending'"
+                        );
+                        $appoint = mysqli_num_rows($app);
+                        ?>
+                        <h5 class="text-white my-2" style="font-size: 30px"><?php echo $appoint; ?></h5>
                         <h5 class="text-white my-2">Total</h5>
                         <h5 class="text-white my-2">Appointment</h5>
                       </div>

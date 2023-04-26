@@ -5,29 +5,30 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Total Patient</title>
+  <title>Total Patient</title>
 </head>
 
 <body>
-<?php
+  <?php
 include("../include/header.php");
 include ("../include/connection.php");
 
 ?>
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-2 " style="margin-left: -30px">
-                <?php
+      <div class="row">
+        <div class="col-md-2 " style="margin-left: -30px">
+          <?php
                 include("sidenav.php");
                 ?>
-            </div>
-            <div class="col-md-10">
-                <h5 class="text-center my-3">Total Patients</h5>
+        </div>
+        <div class="col-md-10">
+          <h5 class="text-center my-3">Total Patients</h5>
 
-                <?php
+          <?php
                 $query = "SELECT * FROM patient";
                 $res = mysqli_query($con,$query);
 
@@ -91,10 +92,10 @@ include ("../include/connection.php");
 
                 echo $output;
                 ?>
-            </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </body>
 
 </html>

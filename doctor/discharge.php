@@ -1,133 +1,126 @@
 <?php
-session_start();
-?>
+session_start(); ?>
 
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Check Patient Appointment</title>
+  <title>Check Patient Appointment</title>
 </head>
 
 <body>
-<?php
-   include("../include/header.php");
-   include("../include/connection.php");
-?>
+  <?php
+  include "../include/header.php";
+  include "../include/connection.php";
+  ?>
 </body>
 
-  <div class="container-fluid">
-       <div class="col-md-12">
-           <div class="row">
-                 <div class="col-md-2" style="margin-left: -30px">
-                     <?php
-                        include("sidenav.php");
-                     ?>
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-2" style="margin-left: -30px">
+        <?php include "sidenav.php"; ?>
 
-                 </div>
+      </div>
 
-                   <div class="col-md-10">
-                         <h5 class="text-center my-2">Total Appointment</h5>
+      <div class="col-md-10">
+        <h5 class="text-center my-2">Total Appointment</h5>
 
-                       <?php
-                           if (isset($_GET['id'])){
-                               $id = $_GET['id'];
+        <?php if (isset($_GET["id"])) {
+            $id = $_GET["id"];
 
-                               $query = "SELECT * FROM appointment WHERE id='$id'";
-                               $res = mysqli_query($con, $query);
-                               $row = mysqli_fetch_array($res);
-                           }
-                       ?>
+            $query = "SELECT * FROM appointment WHERE id='$id'";
+            $res = mysqli_query($con, $query);
+            $row = mysqli_fetch_array($res);
+        } ?>
 
-                       <div class="col-md-12">
-                           <div class="row">
-                               <div class="col-md-6">
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <td colspan="2">Appointment Detail</td>
-                                        </tr>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <table class="table table-bordered">
+                <tr>
+                  <td colspan="2">Appointment Detail</td>
+                </tr>
 
-                                        <tr>
-                                            <td>Firstname</td>
-                                            <td><?php echo $row['firstname'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Firstname</td>
+                  <td><?php echo $row["firstname"]; ?></td>
+                </tr>
 
-                                        <tr>
-                                            <td>Surname</td>
-                                            <td><?php echo $row['surname'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Surname</td>
+                  <td><?php echo $row["surname"]; ?></td>
+                </tr>
 
-                                        <tr>
-                                            <td>Gender</td>
-                                            <td><?php echo $row['gender'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Gender</td>
+                  <td><?php echo $row["gender"]; ?></td>
+                </tr>
 
-                                        <tr>
-                                            <td>Phone No.</td>
-                                            <td><?php echo $row['phone'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Phone No.</td>
+                  <td><?php echo $row["phone"]; ?></td>
+                </tr>
 
-                                        <tr>
-                                            <td>Appointment Date</td>
-                                            <td><?php echo $row['appointment_date'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Appointment Date</td>
+                  <td><?php echo $row["appointment_date"]; ?></td>
+                </tr>
 
-                                        <tr>
-                                            <td>Symptoms</td>
-                                            <td><?php echo $row['symptoms'] ?></td>
-                                        </tr>
+                <tr>
+                  <td>Symptoms</td>
+                  <td><?php echo $row["symptoms"]; ?></td>
+                </tr>
 
-                                    </table>
-                               </div>
+              </table>
+            </div>
 
-                               <div class="col-md-6">
-                                    <h5 class="text-center my-1">Invoice </h5>
+            <div class="col-md-6">
+              <h5 class="text-center my-1">Invoice </h5>
 
-                                   <?php
-                                       if (isset($_POST['send'])){
+              <?php if (isset($_POST["send"])) {
+                  $fee = $_POST["fee"];
+                  $des = $_POST["des"];
 
-                                           $fee = $_POST['fee'];
-                                           $des = $_POST['des'];
+                  if (empty($fee)) {
+                  } elseif (empty($des)) {
+                  } else {
+                      $doc = $_SESSION["doctor"];
+                      $fname = $row["firstname"];
 
-                                           if (empty($fee)){
+                      $query = "INSERT INTO income(doctor,patient,date_discharge,amount_paid,description) VALUES('$doc','$fname',NOW(),'$fee','$des')";
+                      $res = mysqli_query($con, $query);
 
-                                           }elseif (empty($des)){
+                      if ($res) {
+                          echo "<script>alert('You have sent Invoice')</script>";
 
-                                           }else{
-                                               $doc = $_SESSION['doctor'];
-                                               $fname = $row['firstname'];
+                          mysqli_query(
+                              $con,
+                              "UPDATE appointment SET status='Discharge' WHERE id='$id'"
+                          );
+                      }
+                  }
+              } ?>
 
-                                               $query = "INSERT INTO income(doctor,patient,date_discharge,amount_paid,description) VALUES('$doc','$fname',NOW(),'$fee','$des')";
-                                               $res = mysqli_query($con, $query);
+              <form action="" method="post">
+                <label for="">Fee</label>
+                <input type="number" name="fee" class="form-control" autocomplete="off" placeholder="Enter patient Fee">
 
-                                               if ($res){
+                <label for="">Description</label>
+                <input type="text" name="des" class="form-control" autocomplete="off" placeholder="Enter Description">
 
-                                                    echo "<script>alert('You have sent Invoice')</script>";
-
-                                                    mysqli_query($con, "UPDATE appointment SET status='Discharge' WHERE id='$id'");
-                                               }
-                                           }
-                                       }
-                                   ?>
-
-                                   <form action="" method="post">
-                                       <label for="">Fee</label>
-                                       <input type="number" name="fee" class="form-control" autocomplete="off" placeholder="Enter patient Fee">
-
-                                       <label for="">Description</label>
-                                       <input type="text" name="des" class="form-control" autocomplete="off" placeholder="Enter Description">
-
-                                       <input type="submit" name="send" class="btn btn-info my-2" value="Send">
+                <input type="submit" name="send" class="btn btn-info my-2" value="Send">
 
 
-                                   </form>
-                               </div>
-                           </div>
-                       </div>
+              </form>
+            </div>
+          </div>
+        </div>
 
-                   </div>
-           </div>
-       </div>
+      </div>
+    </div>
   </div>
+</div>
 
 </html>

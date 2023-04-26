@@ -1,36 +1,35 @@
 <?php
-session_start();
-?>
+session_start(); ?>
 
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Total Appointment</title>
+  <title>Total Appointment</title>
 </head>
 
 <body>
-<?php
-   include("../include/header.php");
-   include("../include/connection.php");
+  <?php
+include "../include/header.php";
+include "../include/connection.php";
 ?>
 
-   <div class="container-fluid">
-         <div class="col-md-12">
-              <div class="row">
-                   <div class="col-md-2" style="margin-left: -30px">
-                       <?php
-                         include("sidenav.php");
-                       ?>
-                   </div>
-                   <div class="col-md-10">
-                        <h5 class="text-center my-2">Total Appointment</h5>
-                       <?php
-                           $query = "SELECT * FROM appointment WHERE status='Pending'";
-                           $res = mysqli_query($con, $query);
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2" style="margin-left: -30px">
+          <?php include "sidenav.php"; ?>
+        </div>
+        <div class="col-md-10">
+          <h5 class="text-center my-2">Total Appointment</h5>
+          <?php
+                       $query =
+                           "SELECT * FROM appointment WHERE status='Pending'";
+                       $res = mysqli_query($con, $query);
 
-                           $output = "";
-                           $output .="
+                       $output = "";
+                       $output .= "
                              <table class='table table-bordered'>
                              <tr>
                                 <td>ID</td>
@@ -48,45 +47,64 @@ session_start();
                          
                            ";
 
-                           if (mysqli_num_rows($res) < 1){
-                                $output .= "
+                       if (mysqli_num_rows($res) < 1) {
+                           $output .= "
                                    <tr>
                                        <td class='text-center' colspan='9'>No Appointment Yet</td>
                                    </tr>
                                 
                                 ";
-                           }
+                       }
 
-                           while ($row=mysqli_fetch_array($res)){
-                               $output .="
+                       while ($row = mysqli_fetch_array($res)) {
+                           $output .=
+                               "
                                   <tr>
-                                     <td>".$row['id']."</td>
-                                     <td>".$row['firstname']."</td>
-                                     <td>".$row['surname']."</td>
-                                     <td>".$row['gender']."</td>
-                                     <td>".$row['phone']."</td>
-                                     <td>".$row['appointment_date']."</td>
-                                     <td>".$row['symptoms']."</td>
-                                     <td>".$row['date_booked']."</td>
+                                     <td>" .
+                               $row["id"] .
+                               "</td>
+                                     <td>" .
+                               $row["firstname"] .
+                               "</td>
+                                     <td>" .
+                               $row["surname"] .
+                               "</td>
+                                     <td>" .
+                               $row["gender"] .
+                               "</td>
+                                     <td>" .
+                               $row["phone"] .
+                               "</td>
+                                     <td>" .
+                               $row["appointment_date"] .
+                               "</td>
+                                     <td>" .
+                               $row["symptoms"] .
+                               "</td>
+                                     <td>" .
+                               $row["date_booked"] .
+                               "</td>
                                      <td>
-                                       <a href='discharge.php?id=".$row['id']."'>
+                                       <a href='discharge.php?id=" .
+                               $row["id"] .
+                               "'>
                                         <button class='btn btn-info'>Check</button>
                                         </a> 
                                     </td>
                                   </tr>
                                ";
-                           }
-                           $output .="
+                       }
+                       $output .= "
                            </table>
                            ";
 
-                           echo $output;
+                       echo $output;
                        ?>
-                   </div>
+        </div>
 
-              </div>
-         </div>
-   </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
