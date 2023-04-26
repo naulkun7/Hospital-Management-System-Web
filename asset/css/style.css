@@ -1,0 +1,51 @@
+.section1 {
+  background: var(--color-bg);
+}
+
+.section1 .row {
+  align-items: center;
+}
+
+.section1 .box1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.section1 .box1 .title {
+  width: 100%;
+  font-size: 23px;
+  color: var(--color-text-blue);
+}
+
+.section1 .box1 .sub-title {
+  width: 100%;
+  font-size: 55px;
+  font-weight: 600;
+  color: var(--color-text-blue);
+}
+
+.section1 .box2 .image {
+  object-fit: cover;
+  height: 500px;
+  width: auto;
+}
+
+.section1 .box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section1 .button {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section1 .button:hover {
+  color: var(--color-yellow);
+}
