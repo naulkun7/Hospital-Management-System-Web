@@ -82,6 +82,21 @@ include("asset/css/base.css") ?>
     </div>
   </div>
   </div>
+
+  <div class="section3">
+    <div class="inner-content">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.131719788131!2d106.79904467588085!3d10.877584789277451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8a415a9d221%3A0x550c2b41569376f9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBRdeG7kWMgVOG6vyAtIMSQ4bqhaSBo4buNYyBRdeG7kWMgZ2lhIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1682512870711!5m2!1svi!2s"
+        width="600" height="450" style="border:0; width:100%" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <div class="inner">
+      .inner
+    </div>
+  </footer>
 </body>
 
 </html>
