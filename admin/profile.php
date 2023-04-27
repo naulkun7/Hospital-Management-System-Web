@@ -56,7 +56,7 @@ session_start();
                 } ?>
                 <form method="post" enctype="multipart/form-data">
 
-                  <?php echo "<img src='img/$profiles' class='col-md-12' style='height: 100%; aspect-ratio: 4/3; width: auto; object-fit: cover; ' alt='image'>"; ?>
+                  <?php echo "<img src='img/$profiles' class='col-md-12' style='height: 200px; aspect-ratio: 4/3; width: auto; object-fit: cover; ' alt='image'>"; ?>
 
 
                   <br><br>
