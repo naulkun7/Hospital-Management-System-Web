@@ -28,7 +28,7 @@ include("asset/css/base.css") ?>
             <h1 class="sub-title">
               Hospital Management System
             </h1>
-            <a class="button button-yellow" href="#">GO</a>
+            <!-- <a class="button button-yellow" href="#">GO</a> -->
           </div>
         </div>
         <div class="col-6">
@@ -51,7 +51,8 @@ include("asset/css/base.css") ?>
               <p class="desc">
                 Click on the button to read report and all features of our project
               </p>
-              <a href="#" class="button button-yellow">READ MORE</a>
+              <a href="https://drive.google.com/drive/folders/1hQIMl28yTX1B-RTUwq1cX2lPGwLK1wGC"
+                class="button button-yellow" target="_blank">READ MORE</a>
             </div>
           </div>
         </div>
@@ -72,9 +73,9 @@ include("asset/css/base.css") ?>
             <img src="./img/contactus.jpg" alt="blog-item-01" alt="blog-item-02" />
 
             <div class="tag-content">
-              <a href="#" class="title">Contact Us</a>
+              <a href="#" class="title" target="_blank">Contact Us</a>
               <p class="desc">
-                All information about us!
+                All information <br> about us!
               </p>
               <a href="#" class="button button-yellow">DANGER</a>
             </div>
@@ -107,14 +108,14 @@ include("asset/css/base.css") ?>
         <div class="col-6">
           <ul id="social">
             <li class="item">
-              <a href="#">
+              <a href="https://github.com/naulkun7/SE_Final" target="_blank">
                 <i class="fa-brands fa-github">
                   GITHUB
                 </i>
               </a>
             </li>
             <li class="item">
-              <a href="#">
+              <a href="https://www.facebook.com/ti.nguyen.75685962" target="_blank">
                 <i class="fa-brands fa-facebook">
                   FACEBOOK
                 </i>

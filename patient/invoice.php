@@ -1,46 +1,47 @@
 <?php
-session_start();
-?>
+session_start(); ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Name of the website</title>
+  <title>Name of the website</title>
 </head>
 
 <body>
-<?php
-  include('../include/header.php');
-  include('../include/connection.php');
+  <?php
+include "../include/header.php";
+include "../include/connection.php";
 ?>
 
   <div class="contain-fluid">
-        <div class="col-md-12">
-             <div class="row">
-                 <div class="col-md-2" style="margin-left: -30px">
-                     <?php
-                      include("sidenav.php");
-                     ?>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2" style="margin-left: -30px">
+          <?php include "sidenav.php"; ?>
 
-                 </div>
+        </div>
 
-                 <div class="col-md-10">
-                      <h5 class="text-center my-2">My Invoice</h5>
+        <div class="col-md-10">
+          <h5 class="text-center my-2">My Invoice</h5>
 
-                     <?php
-                         $pat = $_SESSION['patient'];
-                         $query = "SELECT * FROM patient WHERE username='$pat'";
-                         $res = mysqli_query($con,$query);
+          <?php
+                     $pat = $_SESSION["patient"];
+                     $query = "SELECT * FROM patient WHERE username='$pat'";
+                     $res = mysqli_query($con, $query);
 
-                         $row = mysqli_fetch_array($res);
+                     $row = mysqli_fetch_array($res);
 
-                         $fname = $row['firstname'];
+                     $fname = $row["firstname"];
 
-                         $queries = mysqli_query($con, "SELECT * FROM income WHERE patient='$fname'");
+                     $queries = mysqli_query(
+                         $con,
+                         "SELECT * FROM income WHERE patient='$fname'"
+                     );
 
-                         $output = "";
+                     $output = "";
 
-                         $output .="
+                     $output .= "
                            <table class='table table-bordered'>
                            
                            <tr>
@@ -56,25 +57,40 @@ session_start();
                            
                          ";
 
-                         if (mysqli_num_rows($queries) < 1){
-                             $output .="
+                     if (mysqli_num_rows($queries) < 1) {
+                         $output .= "
                                <tr>
                                   <td colspan='7' class='text-center'>No Invoice Yet</td>
                                 
                                 </tr>
                              ";
-                         }while ($row = mysqli_fetch_array($queries)){
-
-                             $output .="
+                     }
+                     while ($row = mysqli_fetch_array($queries)) {
+                         $output .=
+                             "
                                 <tr>
-                                   <td>".$row['id']."</td>
-                                    <td>".$row['doctor']."</td>
-                                     <td>".$row['patient']."</td>
-                                      <td>".$row['date_discharge']."</td>
-                                       <td>".$row['amount_paid']."</td>
-                                        <td>".$row['description']."</td>
+                                   <td>" .
+                             $row["id"] .
+                             "</td>
+                                    <td>" .
+                             $row["doctor"] .
+                             "</td>
+                                     <td>" .
+                             $row["patient"] .
+                             "</td>
+                                      <td>" .
+                             $row["date_discharge"] .
+                             "</td>
+                                       <td>" .
+                             $row["amount_paid"] .
+                             "</td>
+                                        <td>" .
+                             $row["description"] .
+                             "</td>
                                         <td>
-                                             <a href='view.php?id=".$row['id']."'>
+                                             <a href='view.php?id=" .
+                             $row["id"] .
+                             "'>
                                              
                                                  <button class='btn btn-info'>View</button>
                                             </a>
@@ -82,15 +98,15 @@ session_start();
                                 </tr>
                              ";
                      }
-                         $output .="
+                     $output .= "
                             </table>
                          ";
-                         echo $output;
+                     echo $output;
                      ?>
-                 </div>
-             </div>
-
         </div>
+      </div>
+
+    </div>
   </div>
 </body>
 
