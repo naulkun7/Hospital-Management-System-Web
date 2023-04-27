@@ -172,7 +172,7 @@ session_start(); ?>
                       $row = mysqli_fetch_array($in);
                       $inc = $row["profit"];
                       ?>
-                      <h5 class="my-2 text-white" style="font-size:30px"><?php echo "GHC $inc"; ?></h5>
+                      <h5 class="my-2 text-white" style="font-size:30px"><?php echo "$inc VND"; ?></h5>
                       <h5>Total</h5>
                       <h5>Income</h5>
                     </div>
