@@ -44,7 +44,7 @@
               <h5 class="my-3">Date Registered: <?php echo $row[
                       "data_reg"
                   ]; ?></h5>
-              <h5 class="my-3">Salary: GHC <?php echo $row["salary"]; ?></h5>
+              <h5 class="my-3">Salary: <?php echo $row["salary"]; ?> VND</h5>
 
             </div>
             <div class="col-md-4">

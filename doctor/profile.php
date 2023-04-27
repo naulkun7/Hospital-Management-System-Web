@@ -112,7 +112,7 @@ error_reporting(0);
 
                       <tr>
                         <td>Salary</td>
-                        <td><?php echo "GHC" . $row["salary"] . ""; ?></td>
+                        <td><?php echo $row["salary"]. "VND" . ""; ?></td>
                       </tr>
 
 
