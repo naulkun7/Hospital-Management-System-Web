@@ -54,10 +54,10 @@ session_start(); ?>
               <form action="" method="post" enctype="multipart/form-data">
                 <?php echo "<img src='img/" .
                     $row["profile"] .
-                    "' alt='joy' class='col-md-12' style='height: 250px;'>"; ?>
+                    "' alt='joy' style='height: auto; width:200px; object-fit: cover;'>"; ?>
                 <input type="file" name="img" class="form-control my-2">
-                <input type="submit" name="upload" class="btn btn-info" value="Update Profile">
-
+                <input type="submit" name="upload" class="btn btn-info" value="Update Profile"
+                  style="margin-bottom: 30px">
               </form>
 
               <table class="table table-bordered">
@@ -121,7 +121,8 @@ session_start(); ?>
               } ?>
               <form action="" method="post">
                 <label for="">Enter Username</label>
-                <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+                <input type="text" name="uname" pattern="^[^\s]*$" class="form-control" autocomplete="off"
+                  placeholder="Enter Username">
                 <input type="submit" name="update" class="btn btn-info my-2" value="Update Username">
 
               </form>
@@ -163,7 +164,7 @@ session_start(); ?>
                 <input type="password" name="con_pass" class="form-control" autocomplete="off"
                   placeholder="Enter Confirm password">
 
-                <input type="submit" name="change" class="btn btn-info" value="Change Password">
+                <input type="submit" name="change" class="btn btn-info" value="Change Password" style="margin-top:15px">
               </form>
             </div>
           </div>

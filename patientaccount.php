@@ -80,12 +80,12 @@ if (isset($_POST['create'])){
           <h5 class="text-center text-info my-2">Create Account</h5>
           <form action="" method="post">
             <div class="form-group">
-              <label for="">Firstname</label>
+              <label for="">First Name</label>
               <input type="text" name="fname" class="form-control" autocomplete="off" placeholder="Enter Firstname">
             </div>
 
             <div class="form-group">
-              <label for="">Surname</label>
+              <label for="">Last Name</label>
               <input type="text" name="sname" class="form-control" autocomplete="off" placeholder="Enter Surname">
             </div>
 

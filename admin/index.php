@@ -48,8 +48,8 @@ session_start(); ?>
                       ?>
                       <!--<h5 class="my-2 text-white" style="font-size:30px">0</h5>-->
                       <h5 class="my-2 text-white" style="font-size:30px"><?php echo $num; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Admin</h5>
+                      <h5 class="text-white">Total <br> Admin</h5>
+
                     </div>
 
                     <div class="col-md-4">
@@ -73,8 +73,8 @@ session_start(); ?>
                     <div class="col-md-8">
                       <!--<h5 class="my-2 text-white" style="font-size:30px">0</h5>-->
                       <h5 class="my-2 text-white" style="font-size:30px"><?php echo $num2; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Doctors</h5>
+                      <h5 class="text-white">Total <br> Doctors</h5>
+
                     </div>
 
                     <div class="col-md-4">
@@ -96,8 +96,7 @@ session_start(); ?>
                       ?>
 
                       <h5 class="my-2 text-white" style="font-size:30px"><?php echo $pp; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Patients</h5>
+                      <h5 class="text-white">Total <br> Patients</h5>
                     </div>
 
                     <div class="col-md-4">
@@ -120,8 +119,7 @@ session_start(); ?>
                       $rep = mysqli_num_rows($re);
                       ?>
                       <h5 class="my-2 text-white" style="font-size:30px"><?php echo $rep; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Reports</h5>
+                      <h5 class="text-white">Total <br> Reports</h5>
                     </div>
 
                     <div class="col-md-4">
@@ -147,8 +145,8 @@ session_start(); ?>
                     <div class="col-md-8">
                       <!--<h5 class="my-2 text-white" style="font-size:30px">0</h5>-->
                       <h5 class="my-2 text-white" style="font-size:30px"><?php echo $num1; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Job Request</h5>
+                      <h5 class="text-white">Total <br> Job Request</h5>
+
                     </div>
 
                     <div class="col-md-4">
@@ -172,9 +170,9 @@ session_start(); ?>
                       $row = mysqli_fetch_array($in);
                       $inc = $row["profit"];
                       ?>
-                      <h5 class="my-2 text-white" style="font-size:30px"><?php echo "$inc VND"; ?></h5>
-                      <h5>Total</h5>
-                      <h5>Income</h5>
+                      <h5 class="my-2 text-white" style="font-size:30px"><?php echo "$inc USD"; ?></h5>
+                      <h5 class="text-white">Total <br> Income</h5>
+                      <!-- <h5>Income</h5> -->
                     </div>
 
                     <div class="col-md-4">

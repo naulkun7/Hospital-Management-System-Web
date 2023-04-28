@@ -30,7 +30,7 @@ session_start(); ?>
             <div class="col-md-12">
               <div class="row">
 
-                <div class="col-md-3 my-2 bg-info mx-2" style="height: 150px">
+                <div class="col-md-4 my-2 bg-info" style="height: 150px">
                   <div class="col-md-12">
                     <div class="row">
 
@@ -44,7 +44,7 @@ session_start(); ?>
                   </div>
                 </div>
 
-                <div class="col-md-3 my-2 bg-warning mx-2" style="height: 150px">
+                <div class="col-md-4 my-2 bg-warning" style="height: 150px">
                   <div class="col-md-12">
                     <div class="row">
                       <?php
@@ -64,7 +64,7 @@ session_start(); ?>
                   </div>
                 </div>
 
-                <div class="col-md-3 my-2 bg-success mx-2" style="height: 150px">
+                <div class="col-md-4 my-2 bg-success" style="height: 150px">
                   <div class="col-md-12">
                     <div class="row">
 

@@ -91,7 +91,7 @@ if (isset($error["apply"])) {
             <!--Form tag using HTTP Request(POST) which will POST Data into the database Table siting on the serve  -->
             <div class="form-group">
               <!--1st Form Group-->
-              <label for="">FirstName</label>
+              <label for="">First Name</label>
               <!--Label Text Name form-->
 
               <!--The value introduced in the input tag allows users to have whatever they typed in the field showing assuming they make error during typing and needs changes-->
@@ -102,7 +102,7 @@ if (isset($error["apply"])) {
             </div>
 
             <div class="form-group">
-              <label for="">Surname</label>
+              <label for="">Last Name</label>
               <input type="text" name="sname" class="form-control" autocomplete="off" placeholder="Enter Surname" value="<?php if (isset($_POST["sname"])) {
                     echo $_POST["sname"];
                 } ?>">
@@ -110,8 +110,8 @@ if (isset($error["apply"])) {
 
             <div class="form-group">
               <label for="">UserName</label>
-              <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username"
-                value="<?php if (isset($_POST["uname"])) {
+              <input type="text" pattern="^[^\s]*$" name="uname" class="form-control" autocomplete="off"
+                placeholder="Enter Username" value="<?php if (isset($_POST["uname"])) {
                     echo $_POST["uname"];
                 } ?>">
             </div>
@@ -125,18 +125,18 @@ if (isset($error["apply"])) {
             <div class="form-group">
               <label for="">Select Gender</label>
               <select name="gender" id="" class="form-control">
-                <!--The name is an identity for this field of the form-->
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Male">Female</option>
+                <option value="Male">Other</option>
               </select>
             </div>
 
 
             <div class="form-group">
               <label for="">Phone Number </label>
-              <input type="number" name="phone" class="form-control" autocomplete="off" placeholder="Enter Phone Number"
-                value="<?php if (isset($_POST["phone"])) {
+              <input type="number" name="phone" pattern="[^0-9]+" class="form-control" autocomplete="off"
+                placeholder="Enter Phone Number" value="<?php if (isset($_POST["phone"])) {
                     echo $_POST["phone"];
                 } ?>">
             </div>
@@ -171,16 +171,12 @@ if (isset($error["apply"])) {
             </div>
 
             <input type="submit" name="apply" value="Apply Now" class="btn btn-success">
-            <!--Name for the input button will be ISSET in PHP to write the backend-->
 
             <p>I already have an account <a href="doctorlogin.php">Click Here..!!</a></p>
-            <!--If a User(DOCTOR) already a registered person..He/she has to click here-->
           </form>
-
         </div>
       </div>
     </div>
-
   </div>
 
 

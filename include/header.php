@@ -24,13 +24,37 @@ include("asset/css/header.css") ?>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-info bg-info">
-    <div class="container">
-      <i class="fa-solid fa-house icon text-white">
-        HOSPITAL MANAGEMENT SYSTEM
-      </i>
-      <div class="mr-auto"></div>
-      <ul class="navbar-nav">
-        <?php
+    <?php
+    if (isset($_SESSION["admin"])) {
+      $user = $_SESSION["admin"];
+      echo '
+      <div class="container-fluid">
+      ';
+    }
+    elseif (isset($_SESSION["doctor"])) {
+      $user = $_SESSION["doctor"];
+      echo '
+      <div class="container-fluid">
+      ';
+    }
+    elseif (isset($_SESSION["patient"])) {
+      $user = $_SESSION["patient"];
+      echo '
+      <div class="container-fluid">
+      ';
+    }
+    else {
+      echo '
+      <div class="container">
+      ';
+    }
+    ?>
+    <i class="fa-solid fa-house icon text-white">
+      HOSPITAL MANAGEMENT SYSTEM
+    </i>
+    <div class="mr-auto"></div>
+    <ul class="navbar-nav">
+      <?php
         if (isset($_SESSION["admin"])) {
           $user = $_SESSION["admin"];
           echo '
@@ -58,7 +82,7 @@ include("asset/css/header.css") ?>
           ';
         }
       ?>
-      </ul>
+    </ul>
     </div>
   </nav>
 </body>
