@@ -7,6 +7,7 @@
   --color-purple: #8261ee;
   --color-black: #1e1e1e;
   --color-bg: #eff2f5;
+  --color-blue: #103178;
 }
 
 * {
@@ -55,4 +56,8 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.bg-info {
+  background-color: var(--color-blue) !important;
 }
