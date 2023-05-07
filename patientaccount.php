@@ -64,7 +64,7 @@ if (isset($_POST['create'])){
   <title>Create Patience Account</title>
 </head>
 
-<body style="background-image: url(img/back.jpg); background-repeat: no-repeat; background-size: cover">
+<body style="background-image: url(img/backgroundHos.jpg); background-repeat: no-repeat; background-size: cover">
 
   <?php
   include("include/header.php");

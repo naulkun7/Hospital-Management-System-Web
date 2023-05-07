@@ -66,7 +66,7 @@ if (isset($error["apply"])) {
 <!DOCTYPE html>
 <html>
 
-<body style="background-image: url(img/hospitalBuilding.jpg); background-size: cover; background-repeat: no-repeat">
+<body style="background-image: url(img/dogtor.jpg); background-size: cover; background-repeat: no-repeat">
 
   <!--Referencing the HEADER in this Page-->
   <?php include "include/header.php"; ?>
