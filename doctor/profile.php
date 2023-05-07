@@ -61,11 +61,11 @@ error_reporting(0);
 
                   <form action="" method="post" enctype="multipart/form-data">
                     <?php echo "<img src='img/" .
-                        $row["profile"] .
-                        "' style='height:100px; width= 80px' class=' col-md-3 my-3'>"; ?>
-                    <input type="file" name="img" class="form-control my-1">
-                    <input type="submit" name="upload" class="btn btn-success" value="Update Profile">
-
+                    $row["profile"] .
+                    "' alt='joy' style='height: auto; width:200px; object-fit: cover;'>"; ?>
+                    <input type="file" name="img" class="form-control my-2">
+                    <input type="submit" name="upload" class="btn btn-info" value="Update Profile"
+                      style="margin-bottom: 30px">
                   </form>
 
                   <div class="my-3">
