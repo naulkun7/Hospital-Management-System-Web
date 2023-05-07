@@ -85,7 +85,7 @@ include("asset/css/base.css") ?>
               <li class="member">Nguyễn Hoàng Luân - ITITIU20012</li>
               <li class="member">Trần Quang Trí - ITITIU20325</li>
               <li class="member">Nguyễn Lê Thành Tài - ITITIU20298</li>
-              <li class="member">Nghĩa</li>
+              <li class="member">Nguyễn Thành Nghĩa - ITITWE2007</li>
             </ul>
           </div>
         </div>

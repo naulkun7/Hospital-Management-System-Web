@@ -112,15 +112,18 @@
 }
 
 .section3 .contact .member::before {
-  content: "\f007"; /* Unicode value for the FontAwesome icon */
-  font-family: FontAwesome; /* The icon font family */
+  content: "\f007";
+  /* Unicode value for the FontAwesome icon */
+  font-family: FontAwesome;
+  /* The icon font family */
   font-size: 20px;
-  margin-right: 5px; /* Add some space between the icon and the text */
+  margin-right: 5px;
+  /* Add some space between the icon and the text */
 }
 
 .section3 .contact .member {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
