@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 :root {
   --color-text-blue: #35a2b8;
@@ -11,7 +11,7 @@
 }
 
 * {
-  font-family: 'Inria Serif', serif;
+  font-family: "Inria Serif", serif;
   box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@
 .button:hover {
   color: var(--color-yellow);
   transition: all 0.4s;
-  border: 1px solid var(--color-yellow)
+  border: 1px solid var(--color-yellow);
 }
 
 .button-yellow {
@@ -39,13 +39,15 @@
   background-color: var(--color-text-white);
 }
 
-.button-purple {
-  background-color: var(--color-purple);
+.button-blue {
+  background-color: var(--color-text-blue);
 }
 
-
-.button-purple:hover {
-  background-color: var(--color-pink);
+.button-blue:hover {
+  color: var(--color-text-blue);
+  transition: all 0.4s;
+  background-color: var(--color-text-white);
+  border: 1px solid var(--color-text-blue);
 }
 
 /* end button  */

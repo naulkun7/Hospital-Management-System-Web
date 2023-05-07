@@ -89,6 +89,63 @@
   font-size: 13px;
 }
 
+.section3 .contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3 .contact .title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.section3 .contact .listMember {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.section3 .contact .member::before {
+  content: "\f007"; /* Unicode value for the FontAwesome icon */
+  font-family: FontAwesome; /* The icon font family */
+  font-size: 20px;
+  margin-right: 5px; /* Add some space between the icon and the text */
+}
+
+.section3 .contact .member {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#more_info {
+  background: #103178;
+  margin-top: 20px;
+}
+
+#more_info .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#more_info a {
+  margin: 0;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+#more_info a:hover {
+  text-decoration: underline;
+}
+
 footer {
   background-color: var(--color-text-blue);
 }
