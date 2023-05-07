@@ -45,7 +45,7 @@ include("asset/css/base.css") ?>
       <div class="row row2">
         <div class="col-lg-12 col-md-12">
           <div class="tag" id="register">
-            <img src="./img/registerpatient.jpg" alt="blog-item-01" alt="blog-item-02" />
+            <img src="./img/moreinfo.jpg" alt="blog-item-01" alt="blog-item-02" />
             <div class="tag-content">
               <a href="#" class="title" style="font-weight: 700; font-size: 40px">REGISTER PATIENT</a>
               <p class="desc" style="font-size: 30px">
