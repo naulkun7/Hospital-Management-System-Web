@@ -145,7 +145,7 @@ if (isset($error["apply"])) {
               <label for="">Select Country</label>
               <select name="country" id="" class="form-control">
                 <option value="">Select Country</option>
-                <option value="Viet Nam">USA</option>
+                <option value="Viet Nam">Viet Nam</option>
                 <option value="USA">USA</option>
                 <option value="Canada">Canada</option>
                 <option value="Mexico">Mexico</option>
